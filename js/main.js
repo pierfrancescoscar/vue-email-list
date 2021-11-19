@@ -18,11 +18,10 @@ const app = new Vue ({
         mailGenerator() {
             for(let i = 0; i < 10; i++) {
                 axios.get(this.apiURL).then(response => {
-                    console.log(response.data.response);
                     response.data.response;
                     this.mailList.push(response.data.response);
                 })
             }
         } 
     }
-})
+});
